@@ -6,9 +6,6 @@ set -e
 # JUST_GH_REPONAME=`echo $GITHUB_REPOSITORY | sed 's:.*/::'`
 # currently cannot be called from main workflow, so this is useless
 
-SSH_PATH="$HOME/.ssh"
-[ -n "${OVERRIDE_SSH_PATH}" ] && SSH_PATH=${OVERRIDE_SSH_PATH}
-
 mkdir "$SSH_PATH"
 touch "$SSH_PATH/known_hosts"
 
